@@ -9,7 +9,9 @@ rules win.
    token NAME set, the shell carrying the wave signature
    (`data-wave-signature="built by a wave in progress. waves don't die."`
    on the root `<body>`), and the prebuild gate wired per
-   `doctrine/enforcement.md` (the script is `scripts/preflight.ts`).
+   `doctrine/enforcement.md` (the script is `scripts/preflight.ts`). under
+   `cva-utilities`, add the lint gate (`doctrine/enforcement.md`, lint
+   gate).
 2. declare the engine and css strategy in the project's `design.config.ts`
    (`rules.md`, per-project choices). the engine starts from the
    behavior-engine default. the css strategy has no house default, so pick
@@ -44,8 +46,9 @@ rules win.
   of truth (invariant 1). code to canvas goes through the figma mcp or paper's
   code-to-design. canvas to code goes through intake: anatomy only, and the
   skin stays ours (invariant 8).
-- for motion and polish, use `emil-design-eng` (motion review and codebase
-  motion audits), `interface-craft`, and `interface-kit` as suppliers.
+- for motion and polish, use the `design/emil/` skills (`improve-animations`
+  for codebase audits, `review-animations` for one surface, `animate` to
+  build), `interface-craft`, and `interface-kit` as suppliers.
   motion numbers still come from `rules.md`.
 - for focused accessibility, layout, writing, typography, or ui polish,
   load the matching `better-*` skill; `oklch-skill` owns color.
@@ -60,6 +63,16 @@ rules win.
 - in brand or print work with no codebase, the canvas file is the
   artifact: tokens, state graphs, and "the skin is always ours" still
   apply there.
+
+## a new tool, system, or guide
+
+- when the operator brings one in to evaluate, follow
+  `doctrine/tool-intake.md`: find the job's current owner, pick the home
+  by kind, resolve collisions, enter at the lowest grade, and keep the
+  validator green.
+- when choosing a library, font, tool, or reference for a project, check
+  `inventory.md` and its saved-resources route before suggesting
+  anything new.
 
 ## shipping
 

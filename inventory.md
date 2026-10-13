@@ -5,6 +5,9 @@ are catalogs: their numbers and styles are examples, and `rules.md` wins
 every conflict. a skill not listed here is outside the design practice and
 carries no design law.
 
+this is the one index of the practice. any other design router defers to
+it, and a newcomer gets its verdict here through `doctrine/tool-intake.md`.
+
 verdicts:
 
 - **house**: part of the practice itself.
@@ -29,12 +32,16 @@ verdicts:
 - `better-layout`: supplier. grouping, alignment, reading order, adaptivity, safe areas, and rtl.
 - `better-typography`: supplier. font systems, hierarchy, and text behavior.
 - `oklch-skill`: supplier. color math, ramps, gamut, contrast, and semantic color.
+- `better-colors`: supplier. color-system building and audit: ramps, role tokens, borrow ban, measured contrast.
 - `gradients`: supplier. color-space choices and recipes.
 - `responsive-craft`: watch. its workflows hardcode breakpoints and durations.
 - `loading-states`: watch. its patterns carry durations.
 - `reference-patterns`: watch. it carries motion numbers.
 - `preflight`: supplier. a static design and accessibility review of a component or page, separate from the `scripts/preflight.ts` build gate.
 - `wip-senior-audit`: supplier. the live-site pass inside `studio-audit`.
+- `better-interface`: supplier. one cross-discipline review over the `better-*` skills; `studio-audit` remains the ship check.
+- `interface-review`: supplier. change-scoped interface review of a branch, PR, or uncommitted diff. user-invoked.
+- `explain-interface`: supplier. reverse-engineers how a site or effect was built, for reference intake. user-invoked.
 
 ### craft and writing
 
@@ -46,13 +53,18 @@ verdicts:
 every motion supplier carries concrete durations, springs, and easings.
 they are examples; tuned numbers land in `rules.md`.
 
-- `emil-design-eng`: supplier. the taste anchor, focused motion review, and codebase motion audits.
+- `emil-design-eng`: supplier. the taste anchor.
+- `improve-animations`: supplier. codebase motion audit and fix plans. read-only.
+- `review-animations`: supplier. strict motion review of one diff or surface.
+- `find-animation-opportunities`: supplier. where motion belongs, and where it doesn't. read-only.
+- `animate`: supplier. builds a new animation decision by decision.
 - `interface-craft`: supplier. storyboard notation, critique, and tuning patterns.
 - `css-interaction-tips`: supplier. press feel, popover origins, and hover bugs.
 - `framer-motion`: supplier. code-phase animation patterns (the library is now published as `motion`).
 - `view-transitions`: supplier. native shared-element transitions.
 - `animation-vocabulary`: supplier. names for motion, for writing briefs.
 - `interface-sound`: supplier. audio feedback.
+- `mobile-native`: supplier. platform-layer fixes that make web apps feel native on phones.
 
 ### graphics
 
@@ -64,13 +76,17 @@ they are examples; tuned numbers land in `rules.md`.
 - `nothing-design`: opt-in. a full visual system, never auto-applied.
 - `swiss-design`: opt-in. reference doctrine.
 - `muller-brockmann-grid-systems`: opt-in. reference doctrine.
-- `apple-design`: opt-in. apple interaction principles translated to the web.
+- `apple-design`: opt-in. apple interaction principles translated to the web. lives in `design/emil/`.
 
 ### tools and kits
 
 - `figma-mcp`: supplier. reading and generating from figma files.
 - `paper`: supplier. the paper canvas workflow; mechanics are in `practices/paper.md`.
 - `wiretext`: supplier. ascii wireframes before canvas or code.
+- `build-design`: supplier. design-to-code that maps every value to an existing token and compares the build to the design frame by frame. written for figma; with paper, read values through the paper mcp.
+- `state-machine`: supplier. a throwaway route that renders every reachable state of one component behind a switcher. user-invoked.
+- `break`: supplier. a throwaway stress page of one component under every reachable scenario. user-invoked.
+- `variant`: supplier. three on-purpose variants of one piece behind a picker on the real page. user-invoked.
 - `dialkit`: supplier. the tuning instrument: how better motion numbers get found, never a source of them.
 - `interface-kit`: supplier. a dev-only style-editing overlay.
 - `agentation`: supplier. a dev-only annotation toolbar.
@@ -95,3 +111,19 @@ they are examples; tuned numbers land in `rules.md`.
 - leva: a dev-only react parameter panel for general controls. dialkit stays the default for motion and visual tuning.
 - paper-desktop plugin: ships its own `code-to-design` and `design-to-code` skills, outside cortex.
 - three.js: no skill yet. learn it on the first real pull.
+- `@shadcn/lint`: house, as an experiment. the lint gate for `cva-utilities` projects, beside preflight (`doctrine/enforcement.md`, lint gate).
+
+## saved resources
+
+the operator keeps a wider shelf of saved resources outside cortex, in
+their notes vault: component libraries, fonts, tools, references, and
+inspiration, one note per resource with its link and why it was saved. the
+machine's own agent instructions give its location, and a `memory-search`
+tool, where one is installed, finds notes by meaning.
+
+- check the shelf when choosing a library, font, tool, or reference, and
+  say a suggestion came from it.
+- a saved resource is a candidate, never a standard. adopting one goes
+  through `doctrine/tool-intake.md`.
+- the shelf is read-only from project work. saving or changing a resource
+  goes through the operator's own notes route.
